@@ -39,7 +39,8 @@
 		$itemVal: (nth($values, $i));
 		@if $itemVal != "auto"{
 			$pxlist: append($pxlist, $itemVal + px);
-	    	$remlist: append($remlist, ($itemVal / 10) + rem);
+	    	//$remlist: append($remlist, ($itemVal / 10) + rem); // Use this if you've set HTML font size value to 62.5%
+	    	$remlist: append($remlist, ($itemVal / 16) + rem);
 		}@else{
 			$pxlist: append($pxlist, auto);
 			$remlist: append($remlist, auto);
@@ -69,7 +70,8 @@
          (min-resolution: 1.3dppx) {
     background-image: url($image);
     background-size: $width + px $height + px;
-    background-size: $width / 10 + rem $height / 10 + rem;
+    //background-size: $width / 10 + rem $height / 10 + rem; // Use this if you've set HTML font size value to 62.5%
+    background-size: $width / 16 + rem $height / 16 + rem;
   }
 }
 
@@ -173,6 +175,18 @@
   filter: alpha(opacity=$opacity-ie); //IE8
 }
 
+// -----------------------------------------
+
+	// Hover and Focus
+
+ // -------------------------------------------
+
+@mixin hoverFocus($property, $value) {
+    &:hover, &:focus {
+        #{$property}: $value;
+    }
+}
+
 
 // -----------------------------------------
 
@@ -233,18 +247,75 @@
 
  // example: @include single-text-shadow(1px, 2px, 2px, #000);
 
- @mixin single-text-shadow($hoff: false, $voff: false, $blur: false, $color: false) {
+@mixin single-text-shadow($hoff: false, $voff: false, $blur: false, $color: false) {
  	text-shadow:$hoff $voff $blur $color;
- }
+}
 
 
 // example: @include inner-shadow(1px, 2px, 2px, #000);
 
- @mixin inner-shadow($hoff: false, $voff: false, $blur: false, $color: false) {
+@mixin inner-shadow($hoff: false, $voff: false, $blur: false, $color: false) {
  	-moz-box-shadow:    inset $hoff $voff $blur $color;
     -webkit-box-shadow: inset $hoff $voff $blur $color;
     box-shadow:         inset $hoff $voff $blur $color;
- }
+}
+
+// -----------------------------------------
+
+	// Display inline block cross browser
+
+// -------------------------------------------
+
+// example: @include inline-block();
+
+@mixin inline-block() {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+}
+
+// -----------------------------------------
+
+	// Replace text
+
+// -------------------------------------------
+
+// example: @include replace-text();
+
+@mixin replace-text() {
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}
+
+// -----------------------------------------
+
+	// Change placeholder text color
+
+// -------------------------------------------
+
+// example: @include placeholder-color(#333);
+
+@mixin placeholder-color($color){
+  &.placeholder{
+    color: $color
+  }
+
+  &:-moz-placeholder{
+    color: $color
+  }
+    
+  &::-webkit-input-placeholder{
+    color: $color
+  }
+
+  &:-ms-input-placeholder{
+    color: $color
+  }
+}
 
 // -----------------------------------------
 
@@ -288,8 +359,65 @@
 
  // example: @include hide-text();
 
- @mixin hide-text() {
+@mixin hide-text() {
  	position:relative;
     text-indent:-99999px;
     display: inline-block;
- }
+}
+
+// -----------------------------------------
+
+	// Translate
+
+// -------------------------------------------
+
+// example: @include translate(0);
+
+@mixin translate($value){
+	-webkit-transform: translatez($value);
+    -moz-transform: translatez($value);
+    -ms-transform: translatez($value);
+    -o-transform: translatez($value);
+    transform: translatez($value);
+}
+
+// -----------------------------------------
+
+	// Transitions
+
+// -------------------------------------------
+
+// example: @include single-transition(background, 1s, ease-in-out, 0);
+
+@mixin single-transition($property, $duration, $timing-function, $delay) {
+	-webkit-transition: $property $duration $timing-function $delay;
+	-moz-transition: $property $duration $timing-function $delay;
+	-o-transition: $property $duration $timing-function $delay;
+	transition: $property $duration $timing-function $delay;
+}
+
+// example: @include double-transition(background, 1s, ease-in-out, 0, opacity, .1s, ease-in-out, 0);
+
+@mixin double-transition($property1, $duration1, $timing-function1, $delay1, $property2, $duration2, $timing-function2, $delay2) {
+	-webkit-transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
+	-moz-transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
+	-o-transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
+	transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
+}
+
+// -----------------------------------------
+
+	// IE 7 Fix for using :before or :after pseudo elements
+
+// -------------------------------------------
+
+// example: @include pseudo-fix(before)
+// example: @include pseudo-fix(after)
+
+@mixin pseudo-fix($pseudo){
+	*zoom: expression( 
+	  this.runtimeStyle.zoom="1",
+	  this.appendChild( document.createElement("small") ).className=$pseudo
+	 );
+}
+
