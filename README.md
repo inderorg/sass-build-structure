@@ -1,7 +1,9 @@
-SASS Structure Boilerplate
+Evernote SASS Structure Boilerplate
 =============
 
 After reading the book [SMACSS](http://smacss.com/) and finding it very helpful the Front End team at Evernote has used some of the ideas in our SASS build. We've found breaking the SASS files out into directories (Base, Layout, Modules, and Themes) helps organize your files in a project and compile CSS into a clean, logical file. Each page has a SASS (.scss) file created that acts as a project file that imports the individual modular components from Base, Layout, Modules, and Themes that are needed to build the particular page.
+
+This build methodology is currently being used on [Evernote.com](https://evernote.com).
 
 SASS Directories
 ----------
@@ -10,7 +12,7 @@ SASS Directories
 
 	The base directory contains styles that help start a project. The base directory could contain the following type of SASS files:
 	* Vendor dependancies (Compass, Foundation)
-	* Authored dependancies (Mixins, variables)
+	* Authored dependancies (Mixins, variables, Extends)
 	* Fonts
 	* Reset
 
