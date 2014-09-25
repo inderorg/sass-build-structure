@@ -37,27 +37,27 @@ SASS Directories
 
 ## Rules
 
-	* There should only be a maximum of 2 CSS files per page ( this prevents HTTP requests )
-	* One line for each selector or rule
-	* List related items together
-	* Only nest 3 levels deep
-	* Break files out into small modules (avoid having a SCSS file that is larger than 100 lines)
-	* Avoid using IDs throughout the site. Use IDs for parent elements. Example: Header, Footer, Main. Using Classes avoids having to use !important 
-	* Be generous with commenting
+  - There should only be a maximum of 2 CSS files per page ( this prevents HTTP requests )
+  - One line for each selector or rule
+  - List related items together
+  - Only nest 3 levels deep
+  - Break files out into small modules (avoid having a SCSS file that is larger than 100 lines)
+  - Avoid using IDs throughout the site. Use IDs for parent elements. Example: Header, Footer, Main. Using Classes avoids having to use !important 
+  - Be generous with commenting
 
 ## Commenting
-	* Using "// " for your comments in SASS and they will not output in the compiled CSS
+  - Using "// " for your comments in SASS and they will not output in the compiled CSS
 
 
 ## Variables
-	* Any values commonly throughout the SASS build should be set as a variable (fonts, colors, percentages, z-index)
-	* All colors should be variables
+  - Any values commonly throughout the SASS build should be set as a variable (fonts, colors, percentages, z-index)
+  - All colors should be variables
 
 
 ## Order of imports
-	* Vendor dependancies (compass)
-	* Authored dependancies (Mixins, variables)
-	* Base styles ( reset, fonts, typography )
-	* Layout styles
-	* Modules styles
-	* Theme styles
+  - Vendor dependancies (compass)
+  - Authored dependancies (Mixins, variables)
+  - Base styles ( reset, fonts, typography )
+  - Layout styles
+  - Modules styles
+  - Theme styles
