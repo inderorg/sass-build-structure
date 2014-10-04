@@ -44,6 +44,7 @@ SASS Directories
   - Break files out into small modules (avoid having a SCSS file that is larger than 100 lines)
   - Avoid using IDs throughout the site. Use IDs for parent elements. Example: Header, Footer, Main. Using Classes avoids having to use !important 
   - Be generous with commenting
+  - If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility.
 
 ## Commenting
   - Using "// " for your comments in SASS and they will not output in the compiled CSS
