@@ -2,18 +2,10 @@
 
 git clone https://github.com/evernote/sass-build-structure.git
 
-cd sass
+rm -r -f README.md package.json
 
-rm -r -f README.md
-
-cd ../
-
-mv sass/* .
-
-rm -r -f sass/
-
-
+mv /* .
 
 echo ''
-echo "The Evernote Sass build has been successfully created"
+echo "The Evernote Sass build has been successfully added to your project"
 echo ''
