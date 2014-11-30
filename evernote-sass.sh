@@ -11,3 +11,8 @@ evernote-sass () {
 
   rm -r -f evernote-sass/
 }
+
+if [ $# -eq 0 ] ; then
+  evernote-sass
+else
+fi
