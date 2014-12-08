@@ -1,14 +1,14 @@
 {
   "author": "Evernote",
   "name": "evernote-sass",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Evernote Sass build structure",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "preferGlobal": "true",
-  "bin":  {
+  "bin": {
     "evernote-sass": "./evernote-sass.sh"
   },
   "repository": {
@@ -27,5 +27,20 @@
   ],
   "bugs": {
     "url": "https://github.com/evernote/sass-build-structure/issues"
+  },
+  "dependencies": {
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^0.17.0",
+    "grunt-sassyclean": "^0.1.1"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "licenses": {
+    "type": "MIT"
   }
 }
