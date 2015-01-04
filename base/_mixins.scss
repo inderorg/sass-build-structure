@@ -262,6 +262,20 @@
 
 // -----------------------------------------
 
+  // Box Shadow
+
+// -------------------------------------------
+
+ // example: @include box-shadow(1px, 2px, 2px, 2px, #000);
+
+@mixin box-shadow($hoff: false, $voff: false, $blur: false, $spread: false, $color: false){
+  -webkit-box-shadow: $hoff $voff $blur $spread $color;
+     -moz-box-shadow: $hoff $voff $blur $spread $color;
+          box-shadow: $hoff $voff $blur $spread $color;
+}
+
+// -----------------------------------------
+
 	// Display inline block cross browser
 
 // -------------------------------------------
@@ -445,22 +459,6 @@
   -ms-animation: #{$str};
   -o-animation: #{$str};
   animation: #{$str};      
-}
-
-// -----------------------------------------
-
-	// IE 7 Fix for using :before or :after pseudo elements
-
-// -------------------------------------------
-
-// example: @include pseudo-fix(before)
-// example: @include pseudo-fix(after)
-
-@mixin pseudo-fix($pseudo){
-	*zoom: expression( 
-	  this.runtimeStyle.zoom="1",
-	  this.appendChild( document.createElement("small") ).className=$pseudo
-	 );
 }
 
 // -----------------------------------------
