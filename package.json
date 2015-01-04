@@ -1,15 +1,12 @@
 {
-  "author": "Evernote",
   "name": "evernote-sass",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "description": "Evernote Sass build structure",
   "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "preferGlobal": "true",
-  "bin":  {
-    "evernote-sass": "./evernote-sass.sh"
   },
   "repository": {
     "type": "git",
@@ -17,15 +14,19 @@
   },
   "keywords": [
     "sass",
-    "scss",
     "css",
-    "template",
     "structure",
+    "template",
     "smacss",
+    "evernote",
     "web",
-    "front-end"
+    "front-end",
+    "scss"
   ],
+  "author": "Ryan Burgess <rburgess@evernote.com> (http://everernote.com/)",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/evernote/sass-build-structure/issues"
-  }
+  },
+  "homepage": "https://github.com/evernote/sass-build-structure"
 }
