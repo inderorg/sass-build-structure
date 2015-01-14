@@ -34,6 +34,9 @@ SASS Directories
 
 	The themes directory contains any specific styles that a page may need to change from the generic layout or modules. For example the header in your website maybe green throughout a website or application but on a specific page you want it to change to a blue background that's where the themes files would come in.
 
+## Removing unused Sass modules
+
+With Evernote's Sass structure we run into having a lot of Sass files in our build. Sometimes they are no longer used so we've started using a Grunt task called [Sassyclean](https://github.com/ryanburgess/grunt-sassyclean) that helps automate removing old unused Sass modules.
 
 ## Rules
 
