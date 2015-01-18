@@ -1,6 +1,6 @@
 {
   "name": "evernote-sass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Evernote Sass build structure",
   "main": "bin/evernotesass",
   "preferGlobal": true,

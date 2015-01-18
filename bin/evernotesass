@@ -3,20 +3,20 @@
 var mkdirp    = require('mkdirp'),
   fs          = require('fs'),
   path        = require('path'),
-  dir;
+  pkg         = require('../package.json'),
+  version     = pkg.version,
+  dir         = path.dirname();
 
-dir = path.dirname(fs.realpathSync(__filename));
-mkdir(dir, function(){
+mkdir(dir + '/sass', function(){
   mkdir(dir + '/sass/base');
   mkdir(dir + '/sass/modules');
   mkdir(dir + '/sass/layout');
   mkdir(dir + '/sass/themes');
 
-  mkdir(dir + '/sass', function(){
-    write(dir + '/sass/base/_extends.scss', '');
-    write(dir + '/sass/base/_fonts.scss', '');
-    write(dir + '/sass/layout/_grid.scss', '');
-  });
+  // create files
+  write(dir + '/sass/base/_extends.scss', '');
+  write(dir + '/sass/base/_fonts.scss', '');
+  write(dir + '/sass/layout/_grid.scss', '');
 });
 
 // create page specific
@@ -65,3 +65,4 @@ function mkdir(path, fn) {
     fn && fn();
   });
 }
+console.log('Evernote Sass ' + version);
