@@ -5,6 +5,15 @@ After reading the book [SMACSS](http://smacss.com/) and finding it very helpful 
 
 This build methodology is currently being used on [Evernote.com](https://evernote.com).
 
+## Install
+
+```js
+npm install evernote-sass -g
+```
+
+## Use
+Run ```evernotesass``` in a directory where you'd like to use the Evernote Sass build.
+
 SASS Directories
 ----------
 
@@ -67,6 +76,10 @@ With Evernote's Sass structure we run into having a lot of Sass files in our bui
   - Theme styles
 
 ## Release History
+* 1.0.3: Update documentation
+* 1.0.2: Remove old shell script
+* 1.0.1: Update generator script
+* 1.0.0: Add evernotesass generator script
 * 0.1.3: Added grunt package with Sass, Watch and Sassyclean.
 * 0.1.0: Initial release.
 
