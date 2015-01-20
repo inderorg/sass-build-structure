@@ -14,6 +14,8 @@ npm install evernote-sass -g
 ## Use
 Run ```evernotesass``` in a directory where you'd like to use the Evernote Sass build.
 
+To create new individual Sass files run ```evernotesass-page```. You can pass a directory and name for the file you'd like to create ```evernotesass-page sass/new-page```
+
 SASS Directories
 ----------
 
@@ -76,6 +78,7 @@ With Evernote's Sass structure we run into having a lot of Sass files in our bui
   - Theme styles
 
 ## Release History
+* 1.0.6: Update documentation for individual Sass file.
 * 1.0.5: Ability to create new individual Sass file.
 * 1.0.4: Set default HTML font size to 62.5% and change REM mixin calculation.
 * 1.0.3: Update documentation
