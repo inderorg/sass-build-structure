@@ -78,8 +78,9 @@ With Evernote's Sass structure we run into having a lot of Sass files in our bui
   - Theme styles
 
 ## Release History
-* 1.0.8: added JSCS support based on google preset.
-* 1.0.7: added editorconfig support.
+* 1.0.9: Added [pull #6](https://github.com/evernote/sass-build-structure/pull/6) missing margin auto mixin.
+* 1.0.8: Added [pull #5](https://github.com/evernote/sass-build-structure/pull/6) JSCS support based on google preset.
+* 1.0.7: Added Added [pull #4](https://github.com/evernote/sass-build-structure/pull/4) editorconfig support.
 * 1.0.6: Update documentation for individual Sass file.
 * 1.0.5: Ability to create new individual Sass file.
 * 1.0.4: Set default HTML font size to 62.5% and change REM mixin calculation.
