@@ -1,15 +1,15 @@
-%marginAuto{
+%marginAuto {
   @include margin-auto();
 }
 
-%clearfix{
+%clearfix {
   @include clearfix();
 }
 
-%inlineBlock{
+%inlineBlock {
   @include inline-block();
 }
 
-%hideText{
+%hideText {
   @include hide-text();
 }
