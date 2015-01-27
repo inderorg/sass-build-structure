@@ -78,6 +78,7 @@ With Evernote's Sass structure we run into having a lot of Sass files in our bui
   - Theme styles
 
 ## Release History
+* 1.1.2: Added [pull #9](https://github.com/evernote/sass-build-structure/pull/9) update grid.
 * 1.1.1: Added [pull #8](https://github.com/evernote/sass-build-structure/pull/8) clean up type.
 * 1.1.0: Added [pull #7](https://github.com/evernote/sass-build-structure/pull/7) clean up coding style.
 * 1.0.9: Added [pull #6](https://github.com/evernote/sass-build-structure/pull/6) missing margin auto mixin.
