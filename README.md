@@ -78,6 +78,7 @@ With Evernote's Sass structure we run into having a lot of Sass files in our bui
   - Theme styles
 
 ## Release History
+* 1.1.6: Change comment dashes to 60.
 * 1.1.5: Move mixins into separate modules.
 * 1.1.4: Small updates to build script.
 * 1.1.3: Added [pull #10](https://github.com/evernote/sass-build-structure/pull/10) add missing "grunt-newer" package.
