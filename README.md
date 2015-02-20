@@ -14,7 +14,9 @@ npm install evernote-sass -g
 ## Use
 Run ```evernotesass``` in a directory where you'd like to use the Evernote Sass build.
 
-To create new individual Sass files run ```evernotesass-page```. You can pass a directory and name for the file you'd like to create ```evernotesass-page sass/new-page```
+To create new individual Sass files run ```evernotesass-page name=filename path=Path-To-Sass-directory```. If the name isn't set the file will be named 'page' and if the path isn't set it assumes the directory is 'sass'.
+
+To create new Sass module run ```evernotesass-module name=filename path=Path-To-Sass-Modules-directory```. If the name isn't set the file will be named 'module' and if the path isn't set it assumes the directory is 'sass/modules'.
 
 SASS Directories
 ----------
@@ -78,6 +80,7 @@ With Evernote's Sass structure we run into having a lot of Sass files in our bui
   - Theme styles
 
 ## Release History
+* 1.2.0: Updates to page generator script and documentation.
 * 1.1.9: Updates to module generator script.
 * 1.1.8: Update package.
 * 1.1.7: Add Sass module generator script.
