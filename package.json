@@ -1,12 +1,13 @@
 {
   "name": "evernote-sass",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Evernote Sass build structure",
   "main": "bin/evernotesass",
   "preferGlobal": true,
   "bin": {
     "evernotesass": "./bin/evernotesass",
-    "evernotesass-page": "./bin/evernotesass-page"
+    "evernotesass-page": "./bin/evernotesass-page",
+    "evernotesass-module": "./bin/evernotesass-module"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
