@@ -1,0 +1,52 @@
+#!/usr/bin/env node
+
+var mkdirp    = require('mkdirp'),
+  fs          = require('fs'),
+  path        = require('path'),
+  pkg         = require('../package.json'),
+  version     = pkg.version,
+  dir         = path.dirname(),
+  newFile     = '',
+  name,
+  path;
+
+// get parameters passed through console
+process.argv.forEach(function (val, index, array) {
+  if(val.indexOf('name') > -1){
+    name = val.split('=');
+  }else if(val.indexOf('path') > -1){
+    path = val.split('=');
+  }
+});
+
+if(name === ''){
+  name = 'module';
+}
+
+if(path === ''){
+  path = 'modules';
+}
+
+newFile += '// File Name: _' + name + '.scss'+ '\n';
+newFile += '// Description: \n';
+newFile += '// Used by: \n';
+newFile += '// Dependencies: \n';
+newFile += '// ------------------------------------------------------------ \n';
+
+write(dir + '/sass/'+ path +'/ _' + name + '.scss', newFile);
+
+
+function write(path, str, mode) {
+  fs.writeFileSync(path, str, { mode: mode || 0666 });
+  console.log('   \x1b[36mcreate\x1b[0m : ' + path);
+}
+
+
+function mkdir(path, fn) {
+  mkdirp(path, 0755, function(err){
+    if (err) throw err;
+    console.log('   \033[36mcreate\033[0m : ' + path);
+    fn && fn();
+  });
+}
+console.log('Evernote Sass module ' + version);
