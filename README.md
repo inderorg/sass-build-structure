@@ -80,6 +80,7 @@ With Evernote's Sass structure we run into having a lot of Sass files in our bui
   - Theme styles
 
 ## Release History
+* 1.2.4: Add date created to module generator script.
 * 1.2.3: Update formatting on default page.scss.
 * 1.2.2: Fixed typos [pull #12](https://github.com/evernote/sass-build-structure/pull/12).
 * 1.2.1: Update error messages.

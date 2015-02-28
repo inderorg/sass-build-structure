@@ -5,6 +5,7 @@ var fs      = require('fs'),
   pkg       = require('../package.json'),
   version   = pkg.version,
   dir       = path.dirname(),
+  dateTime  = require('get-date'),
   newFile   = '',
   name,
   modulePath;
@@ -32,6 +33,7 @@ newFile += '// File Name: _' + name + '.scss'+ '\n';
 newFile += '// Description: \n';
 newFile += '// Used by: \n';
 newFile += '// Dependencies: \n';
+newFile += '// Date created: ' + dateTime() + '\n';
 newFile += '// ------------------------------------------------------------ \n';
 
 fs.writeFile(dir + '/'+ modulePath +'/_' + name + '.scss', newFile, function(err) {
