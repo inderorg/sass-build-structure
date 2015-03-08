@@ -1,7 +1,7 @@
 Evernote SASS Structure Boilerplate
 =============
 
-After reading the book [SMACSS](http://smacss.com/) and finding it very helpful the Front End team at Evernote has used some of the ideas in our SASS build. We've found breaking the SASS files out into directories (Base, Layout, Modules, and Themes) helps organize our files in a project and compile CSS into a clean, logical file. Each page has a SASS (.scss) file created that acts as a project file that imports the individual modular components from Base, Layout, Modules, and Themes that are needed to build the particular page.
+After reading the book [SMACSS](http://smacss.com/) and finding it very helpful the Front End team at Evernote has used some of the ideas in our SASS build. We've found breaking the SASS files out into directories (Base, Layout, Modules, and Views) helps organize our files in a project and compile CSS into a clean, logical file. Each page has a SASS (.scss) file created that acts as a project file that imports the individual modular components from Base, Layout, Modules, and Views that are needed to build the particular page.
 
 This build methodology is currently being used on [Evernote.com](https://evernote.com).
 
@@ -43,9 +43,9 @@ SASS Directories
 	* Navigation
 	* Content Block
 
-4.  Themes
+4.  Views
 
-	The themes directory contains any specific styles that a page may need to change from the generic layout or modules. For example the header in your website maybe green throughout a website or application but on a specific page you want it to change to a blue background that's where the themes files would come in.
+	The views directory contains any specific styles that a page may need to change from the generic layout or modules. For example the header in your website maybe green throughout a website or application but on a specific page you want it to change to a blue background that's where the views files would come in.
 
 ## Removing unused Sass modules
 
@@ -80,6 +80,7 @@ With Evernote's Sass structure we run into having a lot of Sass files in our bui
   - Theme styles
 
 ## Release History
+* 1.2.5: Rename themes directory to views.
 * 1.2.4: Add date created to module generator script.
 * 1.2.3: Update formatting on default page.scss.
 * 1.2.2: Fixed typos [pull #12](https://github.com/evernote/sass-build-structure/pull/12).

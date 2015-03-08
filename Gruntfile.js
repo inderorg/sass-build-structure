@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     },
     sassyclean: {
       options: {
-        modules: ['sass/modules/**/*.scss', 'sass/themes/**/*.scss', 'sass/layout/**/*.scss', 'sass/base/**/*.scss'],
+        modules: ['sass/modules/**/*.scss', 'sass/views/**/*.scss', 'sass/layout/**/*.scss', 'sass/base/**/*.scss'],
         buildfiles: ['sass/**/*.scss'],
         remove: false,
         days: null
