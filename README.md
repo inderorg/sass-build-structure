@@ -77,9 +77,10 @@ With Evernote's Sass structure we run into having a lot of Sass files in our bui
   - Base styles ( reset, fonts, typography )
   - Layout styles
   - Modules styles
-  - Theme styles
+  - Views styles
 
 ## Release History
+* 1.2.6: Update documentation.
 * 1.2.5: Rename themes directory to views.
 * 1.2.4: Add date created to module generator script.
 * 1.2.3: Update formatting on default page.scss.
